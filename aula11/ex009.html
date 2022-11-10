@@ -5,26 +5,87 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>De qual país você é?</title>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+        }
+
+        body{
+            background-color: #087c04;
+        }
+
+        h1{
+            font: normal 30pt Arial;
+            font-weight: 700;
+            color: #ffffff;
+            text-align: center;
+            padding: 50px;
+        }
+
+        #inf{
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            align-items: center;
+        }
+
+        label{
+            font: normal 18pt Arial;
+            font-weight: 400;
+            color: #ffffff;
+        }
+
+        input#txtpais{
+            border: none;
+            border-radius: 10px;
+            font-size: 18pt;
+            text-align: center;
+            color: #087c04;
+        }
+
+        input#botao{
+            font-size: 14pt;
+            color: #087c04;
+            padding: 0.3em;
+            background-color: #ffffff;
+            border: 1px solid #ffffff;
+            border-radius: 20px;
+        }
+
+        div#res{
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            align-items: center;
+            margin-top: 30px;
+            font: normal 18pt Arial;
+            font-weight: 400;
+            color: #ffffff;
+        }
+    </style>
 </head>
-<body>
+<body> <!--Html da página-->
     <h1>Brasileiro ou estrangeiro?</h1>
-    Digite seu país de origem <input type="text" name="txtpais" id="txtpais">
-    <input type="button" value="Verificar" onclick="verificar()">
+    <div id="inf">
+        <label for="txtpais">Digite seu país de origem</label><input type="text" name="txtpais" id="txtpais">
+        <input type="button" value="Verificar" id="botao" onclick="verificar()">
+    </div>
     <div id="res">
 
     </div>
-    <script>
-        function verificar() {
-            var pais = document.getElementById('txtpais')
-            var res = document.getElementById('res')
-            var ori = String(pais.value)
-            res.innerHTML = `<p>Você nasceu no(a) <strong>${ori}</strong></p>`
-            res.innerHTML += `<p>E agora está no Brasil</p>`
+    <script> //script
+        function verificar() { //função
+            var pais = document.getElementById('txtpais') //pega os dados do input
+            var res = document.getElementById('res') //pegas os dados da div
+            var ori = String(pais.value) //transforma os dados do input em string
+            res.innerHTML = `<p>Você nasceu no(a) <strong>${ori}</strong>,</p>` //imprime a frase na tela
+            res.innerHTML += `<p>E agora está no <strong>Brasil</strong>.</p>` //imprime a frase na tela
 
-            if (ori == "Brasil") {
-                res.innerHTML += `<p>Você é brasileiro!</p>`
-            }else{
-                res.innerHTML += `<p>Você é estrangeiro</p>`
+            if (ori == "Brasil") { //se a origem for igual a 'Brasil'
+                res.innerHTML += `<p>Você é <strong>brasileiro</strong>!</p>` //Então imprima isso
+            }else{ //se não
+                res.innerHTML += `<p>Você é <strong>estrangeiro</strong></p>` //imprima isso
             }
         }
     </script>
