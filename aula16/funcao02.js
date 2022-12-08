@@ -1,0 +1,7 @@
+// FUNÇÃO SE SOMA
+
+function soma(n1=0, n2=0) { //FUÇÃO DE SOMA ENTRE N1 E N2, SE N1 OU N2 Ñ TIVER UM NÚMERO DEFINIDO SERÁ CONSIDERADO 0
+    return n1 + n2 //RETORNO DA SOMA DE N1 E N2
+}
+
+console.log(soma(2, 5)) //MOSTRE O RESULTADO DOS NÚMEROS DEFINIDOS

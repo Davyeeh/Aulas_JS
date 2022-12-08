@@ -1,0 +1,13 @@
+// CALCULAR O FATORIAL DE UM NÚMERO
+
+function fatorial(n){ //CRIA UMA FUNÇÃO PARA SABER O FATORIL DE N NÚMERO
+    let fat = 1 //VARIÉVEL FAT RECEBE 1
+    for(let c = n; c > 1; c--){ //O CONTADOR (C) RECEBE O NÚMERO N, ENQUANTO O NÚMERO N FOR MAIOR QUE 1 ELE PERDE 1
+        fat *= c //FAT MULTIPLICA ELE EM IGUAL AO NÚMERO DO CONTADOR
+    }
+    return fat // RETORNA FAT
+}
+
+console.log(fatorial(5)) // MOSTRA O VALOR DE FATORIAL USANDO O NÚMERO COMO PARAMETRO
+
+// 5! = 5 x 4 x 3 x 2 x 1
