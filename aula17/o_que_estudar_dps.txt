@@ -1,0 +1,10 @@
+O que estudar depois:
+
+Fazer curso de HTML5 e CSS3;
+Functions (estudar mais como: callback, anonimas, iife, arrow), javascript funcional;
+Objetos
+Modularização
+RegEx
+JSON
+AJAX
+NodeJS
